@@ -356,10 +356,11 @@ section{
    align-items: flex-start;
 }
 
-.portfolio .box-container .box img{
+.portfolio .box-container .box img {
    height: 30rem;
    width: 100%;
    object-fit: cover;
+   border: 2px solid black; /* This adds a border to each individual image */
 }
 
 .portfolio .box-container .box h3{
@@ -452,7 +453,7 @@ section{
     margin: 0;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 10px; /* Adjust the gap between items */
+    gap: 20px; /* Adjust the gap between items */
  }
 
 .resume-bottom-item {
@@ -471,6 +472,11 @@ section{
    object-fit: contain; /* Maintain aspect ratio */
 }
 
+.skill-label {
+   font-size: 1.4rem; /* Adjust the font size as needed */
+   color: var(--black); /* Use your preferred text color */
+   text-align: center;
+}
 
 
 
