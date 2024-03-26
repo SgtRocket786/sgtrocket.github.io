@@ -20,6 +20,9 @@
    <!-- custom css file link  -->
    <link rel="stylesheet" href="css/style.css">
 
+   <script type="text/javascript" src="https://cdn.emailjs.com/sdk/2.3.2/email.min.js"></script>
+
+
 </head>
 <body>
 
@@ -371,14 +374,15 @@
 
    <h1 class="heading" data-aos="fade-up"> <span>contact me</span> </h1>
 
-   <form action="send_email.php" method="post">
+   <form id="myForm">
       <div class="flex">
-            <input data-aos="fade-right" type="text" name="name" placeholder="Enter your name" class="box" required>
-            <input data-aos="fade-left" type="email" name="email" placeholder="Enter your email" class="box" required>
+         <input data-aos="fade-right" type="text" name="name" placeholder="Enter your name" class="box" required>
+         <input data-aos="fade-left" type="email" name="email" placeholder="Enter your email" class="box" required>
       </div>
-         <textarea data-aos="fade-up" name="message" class="box" required placeholder="Enter your message" cols="30" rows="10"></textarea>
-      <input type="submit" data-aos="zoom-in" value="Send Message" name="send" class="btn">
+      <textarea data-aos="fade-up" name="message" class="box" required placeholder="Enter your message" cols="30" rows="10"></textarea>
+      <input type="submit" data-aos="zoom-in" value="Send Message" class="btn">
    </form>
+
 
 
 
