@@ -526,4 +526,13 @@ section{
       width: 100%;
    }
 
+   .form-feedback-message {
+      display: none; /* Default to hide, JavaScript will change this */
+      color: #000; /* Default color, though inline styles override this */
+      font-size: medium; /* Increase the font size */
+      margin-top: 20px; /* Add some space above the message */
+      text-align: center; /* Center the message */
+   }
+
+
 }
