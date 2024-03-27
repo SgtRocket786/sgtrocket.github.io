@@ -32,19 +32,40 @@ window.onscroll = () =>{
 }
 
 (function(){
-   emailjs.init("J6sOOHRSyTSO0YLPa", origin); // Replace 'your_user_id' with your actual EmailJS user ID
+   emailjs.init("J6sOOHRSyTSO0YLPa"); // Replace 'your_user_id' with your actual EmailJS user ID
 })();
 
 document.addEventListener('DOMContentLoaded', function() {
+   emailjs.init("J6sOOHRSyTSO0YLPa"); // Initialize EmailJS
+
    document.getElementById('myForm').addEventListener('submit', function(event) {
-      event.preventDefault();
-      emailjs.sendForm('service_l292xpo', 'template_b6fdzid', 'myForm', 'J6sOOHRSyTSO0YLPa')
+      event.preventDefault(); // Prevent the default form submission
+
+      // Attempt to send the email
+      emailjs.sendForm('service_l292xpo', 'template_b6fdzid', this)
           .then(function() {
              console.log('SUCCESS!');
-             alert('Your message has been sent successfully!');
+             // Hide error message if visible
+             document.getElementById('form-error-message').style.display = 'none';
+             // Show success message
+             document.getElementById('form-success-message').style.display = 'block';
+             // Optionally, hide the success message after a few seconds
+             setTimeout(function() {
+                document.getElementById('form-success-message').style.display = 'none';
+             }, 5000);
           }, function(error) {
              console.log('FAILED...', error);
-             alert('Failed to send the message. Please try again later.');
+             // Hide success message if visible
+             document.getElementById('form-success-message').style.display = 'none';
+             // Show error message
+             document.getElementById('form-error-message').style.display = 'block';
+             // Optionally, hide the error message after a few seconds
+             setTimeout(function() {
+                document.getElementById('form-error-message').style.display = 'none';
+             }, 5000);
           });
+
+      // Clear form fields after submission
+      this.reset();
    });
 });
