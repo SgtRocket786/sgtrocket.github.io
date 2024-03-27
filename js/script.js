@@ -32,7 +32,7 @@ window.onscroll = () =>{
 }
 
 (function(){
-   emailjs.init("J6sOOHRSyTSO0YLPa"); // Replace 'your_user_id' with your actual EmailJS user ID
+   emailjs.init("J6sOOHRSyTSO0YLPa", origin); // Replace 'your_user_id' with your actual EmailJS user ID
 })();
 
 document.addEventListener('DOMContentLoaded', function() {
