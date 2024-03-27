@@ -26,28 +26,25 @@ window.onscroll = () =>{
             links.classList.remove('active');
             document.querySelector('.header .navbar a[href*='+ id +']').classList.add('active')
          });
-      };
+      }
 
    });
-
-   (function(){
-      emailjs.init("J6sOOHRSyTSO0YLPa"); // Replace 'your_user_id' with your actual EmailJS user ID
-   })();
-
-   document.addEventListener('DOMContentLoaded', function() {
-      document.getElementById('myForm').addEventListener('submit', function(event) {
-         event.preventDefault();
-         emailjs.sendForm('service_l292xpo', 'template_b6fdzid', 'myForm', 'J6sOOHRSyTSO0YLPa')
-             .then(function() {
-                console.log('SUCCESS!');
-                alert('Your message has been sent successfully!');
-             }, function(error) {
-                console.log('FAILED...', error);
-                alert('Failed to send the message. Please try again later.');
-             });
-      });
-   });
-
-
-
 }
+
+(function(){
+   emailjs.init("J6sOOHRSyTSO0YLPa"); // Replace 'your_user_id' with your actual EmailJS user ID
+})();
+
+document.addEventListener('DOMContentLoaded', function() {
+   document.getElementById('myForm').addEventListener('submit', function(event) {
+      event.preventDefault();
+      emailjs.sendForm('service_l292xpo', 'template_b6fdzid', 'myForm', 'J6sOOHRSyTSO0YLPa')
+          .then(function() {
+             console.log('SUCCESS!');
+             alert('Your message has been sent successfully!');
+          }, function(error) {
+             console.log('FAILED...', error);
+             alert('Failed to send the message. Please try again later.');
+          });
+   });
+});
