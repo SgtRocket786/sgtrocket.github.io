@@ -300,8 +300,14 @@ section{
    margin-bottom: 1rem;
 }
 
-.about .edu-exp .row .box-container .box p{
-   line-height: 1.5;
+.about .edu-exp .row .box-container .box h1 {
+   font-size: medium;
+   margin-bottom: 1rem;
+
+}
+
+.about .edu-exp .row .box-container .box ul{
+   line-height: 4;
    font-size: 1.7rem;
    line-height: 2;
 }
