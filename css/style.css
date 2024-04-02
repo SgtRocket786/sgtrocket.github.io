@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600&display=swap');
 
 :root{
-   --yellow: #37a6e1;
+   --blue: #37a6e1;
    --black:#000;
    --white:#fff;
    --light-bg:#eee;
@@ -21,7 +21,7 @@
 
 *::selection{
    background-color: var(--black);
-   color:var(--yellow);
+   color:var(--blue);
 }
 
 *::-webkit-scrollbar{
@@ -34,7 +34,7 @@
 }
 
 *::-webkit-scrollbar-thumb{
-   background-color: var(--yellow);
+   background-color: var(--blue);
 }
 
 html{
@@ -123,7 +123,7 @@ section{
 
 .header .navbar a.active,
 .header .navbar a:hover{
-   background-color: var(--yellow);
+   background-color: var(--blue);
 }
 
 .header .follow a{
@@ -184,7 +184,7 @@ section{
 .home .content span{
    display: inline-block;
    padding:1rem 2rem;
-   background-color: var(--yellow);
+   background-color: var(--blue);
    font-size: 2.5rem;
    margin:1rem 0;
 }
@@ -222,49 +222,7 @@ section{
    font-weight: lighter;
 }
 
-.about .skills{
-   margin:3rem 0;
-}
 
-.about .skills .progress{
-   margin-top: 1rem;
-}
-
-.about .skills .progress .bar{
-   margin:1rem auto;
-   max-width: 70rem;
-   border:var(--border-bold);
-   padding:1rem;
-}
-
-.about .skills .progress .bar h3{
-   display: flex;
-   align-items: center;
-   justify-content: space-between;
-   font-size: 2rem;
-   padding:1rem 2rem;
-   background-color: var(--yellow);
-}
-
-.about .skills .progress .bar span{
-   font-weight: normal;
-}
-
-.about .skills .progress .bar:nth-child(1) h3{
-   width: 95%;
-}
-
-.about .skills .progress .bar:nth-child(2) h3{
-   width: 80%;
-}
-
-.about .skills .progress .bar:nth-child(3) h3{
-   width: 65%;
-}
-
-.about .skills .progress .bar:nth-child(4) h3{
-   width: 80%;
-}
 
 .about .edu-exp .row{
    display: flex;
@@ -279,32 +237,43 @@ section{
 .about .edu-exp .row .box-container .title{
    padding:1.5rem;
    font-size: 3rem;
-   background-color: var(--yellow);
+   background-color: #37A6E1FF;
 }
 
 .about .edu-exp .row .box-container .box{
    text-align: left;
-   margin:1.5rem 0;
    background-color: var(--light-bg);
    padding:2rem;
 }
 
-.about .edu-exp .row .box-container .box span{
-   font-size: 1.5rem;
-}
-
-.about .edu-exp .row .box-container .box h3{
-   font-size: 2.5rem;
+/* Existing Styles */
+.about .edu-exp .row .box-container .box h3 {
+   font-size: 2.25rem; /* Large size for the h3 header */
    font-weight: normal;
-   margin-top: 1.5rem;
+   margin-top: 1.25rem;
    margin-bottom: 1rem;
 }
 
 .about .edu-exp .row .box-container .box h1 {
-   font-size: medium;
+   font-size: 2.25rem;
    margin-bottom: 1rem;
+}
+
+/* New Styles for Heading Container */
+.about .edu-exp .row .box-container .box .heading-container {
+   display: flex; /* Enables Flexbox */
+   align-items:  baseline; /* Vertically centers the items in the container */
+   justify-content: space-between; /* Aligns items to each end */
 
 }
+
+/* Adjusting the date span styling */
+.about .edu-exp .row .box-container .box .heading-container span {
+   font-size: 1.25rem; /* Smaller font size for the date */
+   white-space: nowrap; /* Prevents the date from wrapping */
+
+}
+
 
 .about .edu-exp .row .box-container .box ul{
    line-height: 4;
@@ -334,7 +303,7 @@ section{
    margin:1rem 0;
    font-size: 2rem;
    padding:1.5rem;
-   background-color: var(--yellow);
+   background-color: var(--blue);
    font-weight: normal;
 }
 
@@ -343,17 +312,35 @@ section{
    font-size: 1.7rem;
 }
 
-.services .box-container .box:hover{
-   background-color: var(--black);
+.services .box-container .box{
+   background-color: var(--white);
 }
 
-.services .box-container .box:hover i{
-   color:var(--white);
+.services .box-container .box i{
+   color:var(--black);
 }
 
-.services .box-container .box:hover p{
-   color:var(--white);
+.services .box-container .box p{
+   color:var(--black);
 }
+
+.contact .box-container .box h3{
+   margin:1.5rem 0;
+   font-size: 2.5rem;
+
+}
+
+.contact .box-container .box p{
+   font-size: 2rem;
+   text-transform: none;
+
+}
+
+.contact .box-container .box:hover {
+   background-color: #37a6e1;
+}
+
+
 
 .portfolio .box-container{
    display: grid;
@@ -431,15 +418,7 @@ section{
    margin-bottom: .5rem;
 }
 
-.contact .box-container .box h3{
-   margin:1.5rem 0;
-   font-size: 2.5rem;
-}
 
-.contact .box-container .box p{
-   font-size: 2rem;
-   text-transform: none;
-}
 
 .credit{
    text-align: center;
@@ -450,17 +429,17 @@ section{
 }
 
 .credit span{
-   color:var(--yellow);
+   color:var(--blue);
 }
 
- .resume-bottom-list {
+.resume-bottom-list {
     list-style-type: none;
     padding: 0;
     margin: 0;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 20px; /* Adjust the gap between items */
- }
+}
 
 .resume-bottom-item {
    width: 100%;
@@ -476,6 +455,7 @@ section{
    width: 100%;
    height: 100%;
    object-fit: contain; /* Maintain aspect ratio */
+
 }
 
 .skill-label {
