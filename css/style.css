@@ -447,7 +447,7 @@ section{
    margin: 0;
    display: grid;
    grid-template-columns: repeat(4, 1fr); /* Ensure 4 columns */
-   gap: 25px; /* Adjust the gap between items */
+   gap: 20px; /* Adjust the gap between items */
    width: 100%; /* Make the list take the full width */
 }
 
@@ -457,7 +457,6 @@ section{
    align-items: center;
    width: 100%;
    height: 100%;
-   padding: 20px; /* Adjust padding as needed */
    position: relative;
    font-size: large; /* Increase font size for labels */
 }
@@ -473,14 +472,29 @@ section{
    text-align: center;
 }
 
+/* Media queries for responsiveness */
+@media (max-width: 1200px) {
+   .resume-bottom-list {
+      grid-template-columns: repeat(3, 1fr); /* 3 columns for medium screens */
+   }
+}
+
+@media (max-width: 768px) {
+   .resume-bottom-list {
+      grid-template-columns: repeat(2, 1fr); /* 2 columns for small screens */
+   }
+}
+
+@media (max-width: 480px) {
+   .resume-bottom-list {
+      grid-template-columns: 1fr; /* 1 column for very small screens */
+   }
+}
+
 .certificates {
    display: grid;
    
 }
-
-
-
-
 
 /* media queries  */
 
