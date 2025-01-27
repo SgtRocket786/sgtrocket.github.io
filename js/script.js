@@ -68,4 +68,13 @@ document.addEventListener('DOMContentLoaded', function() {
       // Clear form fields after submission
       this.reset();
    });
+
+   AOS.init({
+      duration: 800,
+      delay: 300
+   });
+   
 });
+
+
+
