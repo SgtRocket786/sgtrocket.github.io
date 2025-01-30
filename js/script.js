@@ -32,11 +32,11 @@ window.onscroll = () =>{
 }
 
 (function(){
-   emailjs.init("J6sOOHRSyTSO0YLPa"); // Replace 'your_user_id' with your actual EmailJS user ID
+   emailjs.init("DgQXwSHsugOXBknBq"); //  actual EmailJS user ID
 })();
 
 document.addEventListener('DOMContentLoaded', function() {
-   emailjs.init("J6sOOHRSyTSO0YLPa"); // Initialize EmailJS
+   emailjs.init("DgQXwSHsugOXBknBq"); // Initialize EmailJS
 
    document.getElementById('myForm').addEventListener('submit', function(event) {
       event.preventDefault(); // Prevent the default form submission
