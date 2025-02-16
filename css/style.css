@@ -290,6 +290,36 @@ section{
    line-height: 2;
 }
 
+
+.certificates .box-container{
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+   gap:1.5rem;
+   align-items: flex-start;
+}
+
+.certificates .box-container .box{
+   padding:3rem 2rem;
+   border:var(--border-light);
+}
+
+.certificates .box-container .box h3{
+   margin:1rem 0;
+   font-size: 2rem;
+   padding:1.5rem;
+   background-color: var(--blue);
+   font-weight: normal;
+}
+
+
+.certificates .box-container .box img {
+   max-width: 100%;
+   height: auto;
+   object-fit: contain;
+
+}
+
+
 .services .box-container{
    display: grid;
    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
@@ -339,8 +369,6 @@ section{
    gap:1.25rem;
    align-items: flex-start;
 }
-
-
 
 .portfolio .box-container .box img {
    height: 30rem;
