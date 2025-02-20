@@ -61,6 +61,7 @@ document.addEventListener('DOMContentLoaded', function() {
         this.reset();
     });
 
+
     // Initialize AOS
     AOS.init({
         duration: 800,
