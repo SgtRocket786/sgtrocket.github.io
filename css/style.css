@@ -123,6 +123,12 @@ section{
     color: var(--blue);
 }
 
+.header .follow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .header .follow a {
     margin: 0 0.5rem;
     font-size: 2rem;
@@ -166,8 +172,36 @@ section{
         font-size: 2rem;
     }
 
+    .header .follow {
+        display: none; /* Hide the follow icons in the header */
+    }
+
+    .header .navbar .follow-mobile {
+        display: flex;
+        flex-direction: row ;
+        align-items: center;
+        justify-content: space-evenly;
+        padding: 2rem; /* Add some padding at the bottom */
+    }
+
+    .header .navbar .follow-mobile a {
+        margin: 0 1rem;
+        font-size: 2rem;
+        color: var(--black);
+        transition: color 0.3s;
+    }
+
+    .header .navbar .follow-mobile a:hover {
+        color: var(--blue);
+    }
+
     #menu-btn {
         display: block;
+    }
+
+    .header .follow {
+        margin-top: 1rem;
+        justify-content: center;
     }
 }
 
