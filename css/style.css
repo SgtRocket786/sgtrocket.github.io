@@ -447,7 +447,7 @@ section{
     margin: 0.5rem 0;
     font-size: 2rem; /* Increase font size */
     font-weight: normal;
-    color: var(--blue);
+    color: var (--blue);
     background-color: transparent; /* Remove background color */
     padding: 0; /* Remove padding */
     text-align: center; /* Center align the text */
@@ -493,10 +493,12 @@ section{
 }
 
 .portfolio .box-container .box img {
-   height: 25rem;
-   width: 100%;
-   object-fit: cover;
+   width: 300px;
+   height: 200px; /* Set a fixed height for the images */
+   object-fit: cover; /* Ensure the images cover the area without distortion */
    border: 1.5px solid black; /* This adds a border to each individual image */
+   margin-bottom: 1rem; /* Add margin below the image */
+   margin-top: 1rem; /* Add margin above the image */
 }
 
 .portfolio .box-container .box h3{
