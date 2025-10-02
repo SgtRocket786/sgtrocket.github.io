@@ -460,8 +460,8 @@ section {
 
 .portfolio .box-container {
   display: grid;
-  /* Use a smaller min width so more cards can fit on narrower viewports */
-  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  /* Desktop: three columns for clearer, larger images */
+  grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem;
   align-items: flex-start;
 }
@@ -781,6 +781,13 @@ section {
   .services .box-container .box h4,
   .portfolio .box-container .box span {
     font-size: 1.5rem; /* Adjust font size for smaller screens */
+  }
+}
+
+/* Larger image height on wide desktops for clearer visuals */
+@media (min-width: 1200px) {
+  .portfolio .box-container .box img {
+    height: 240px;
   }
 }
 
